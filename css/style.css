@@ -3,6 +3,7 @@
     --zoom-success: #4CC800;
     --zoom-alert: #FF2335;
     --zoom-grey: #4A4A4A;
+    --zoom-dark: #222222;
     --zoom-white: #ffffff;
 }
 
@@ -29,7 +30,8 @@ body {
 
 .row {
     display: flex;
-    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding: 0.5rem 0
 }
 
 .d-flex {
@@ -46,6 +48,10 @@ body {
     gap: 0.5rem;
 }
 
+.txt-center {
+    text-align: center;
+}
+
 /* Endregion Utility */
 
 /* Region Header */
@@ -58,4 +64,61 @@ body {
     gap: 0.5rem;
     justify-content: flex-end;
     padding: 0.25rem;
+}
+
+/* Endregion Header */
+
+/* Region Main */
+
+#site_main {
+    background-color: var(--zoom-black);
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+.row img {
+    max-width: 100%;
+}
+
+.user {
+    position: relative;
+}
+
+.name-user {
+    background-color: rgba(49, 49, 49, 0.378);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--zoom-white);
+    font-size: smaller;
+    padding: 0.25rem;
+}
+
+/* Endregion Main */
+
+/* Region Footer */
+
+.options {
+    background-color: var(--zoom-dark);
+    padding: 1rem;
+}
+
+.fa-microphone {
+    color: var(--zoom-white);
+    font-size: 30px;
+}
+
+span {
+    color: var(--zoom-white);
+    font-size: smaller;
+}
+
+
+.mute.d-flex {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fa-angle-up {
+    padding: 0.5rem 1rem;
+    color: white;
 }
