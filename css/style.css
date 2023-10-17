@@ -17,8 +17,6 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 100vw;
-    max-height: 100vh;
 }
 
 /* Endregion Common */
@@ -28,12 +26,11 @@ body {
 .container {
     width: 90%;
     margin: auto;
+    
 }
 
 .row {
-    display: flex;
     gap: 0.3rem;
-    padding: 0.5rem 0
 }
 
 .d-flex {
@@ -54,12 +51,50 @@ body {
     text-align: center;
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
+
+.al-center {
+    align-items: center;
+}
+
+.dir-col {
+    flex-direction: column;
+}
+
+.g-0 {
+    gap: 0.5rem;
+}
+
+.g-1 {
+    gap: 1.5rem;
+}
+
+.f-small {
+    font-size: small;
+}
+
+.f-25 {
+    font-size: 25px;
+}
+
+.f-12{
+    font-size: 12px
+}
+
+.p-0 {
+padding: 0.5rem;
+}
+
 /* Endregion Utility */
 
 /* Region Header */
 
 #site_header {
     background-color: var(--zoom-black);
+    height: 40px;
+    width: 100%;
 }
 
 .buttons.d-flex {
@@ -76,14 +111,18 @@ body {
     background-color: var(--zoom-black);
     padding-top: 2rem;
     padding-bottom: 1rem;
+    height: calc(100vh - 130px);
+    overflow-y: auto;
 }
 
-.row img {
-    max-width: 100%;
+.user img {
+    width: 100%
 }
 
 .user {
     position: relative;
+    width: calc(100% / 7 - 0.3rem);
+    min-width: 150px;
 }
 
 .name-user {
@@ -100,80 +139,36 @@ body {
 
 /* Region Footer */
 
-.options {
+#site_footer {
+    height: 90px;
+    width: 100%;
     background-color: var(--zoom-dark);
-    padding: 1rem;
+    color: var(--zoom-white);
+    padding: 0 1rem;
 }
 
-.fa-microphone,
-.fa-video,
-.fa-user-plus,
-.fa-user-group,
-.fa-chart-column,
-.fa-comment,
-.fa-record-vinyl,
-.fa-table-cells-large,
-.fa-ellipsis {
-    color: var(--zoom-white);
-    font-size: 25px;
+.center {
+    width: 50%;
+
+}
+
+.right, .left {
+    width: 25%;
 }
 
 .fa-share-from-square {
     color: var(--zoom-success);
-    font-size: 25px;
-}
-
-span {
-    color: var(--zoom-white);
-    font-size: smaller;
-}
-
-
-.mute.d-flex,
-.video.d-flex,
-.invite.d-flex,
-.manage.d-flex,
-.polling.d-flex,
-.share.d-flex,
-.chat.d-flex,
-.record.d-flex,
-.table.d-flex,
-.more.d-flex {
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.fa-angle-up {
-    padding: 0.5rem 0.25rem;
-    color: white;
-}
-
-i.fa-solid.fa-angle-up {
-    align-self: center;
-}
-
-.btn-center.d-flex {
-    width: 50%;
-    margin: auto;
-    gap: 1rem;
-}
-
-#site_footer {
-    position: relative;
 }
 
 .meeting {
-    position: absolute;
+    height: 90px;
+    background-color: var(--zoom-grey);
+    width: 120px;
+    padding: 2rem 0;
+    text-align: center;
     color: var(--zoom-alert);
-    right: 0;
-    top: 32px;
 }
 
-.meeting a {
-    text-decoration: none;
-    color: var(--zoom-alert);
-    background-color: var(--zoom-grey);
-    padding: 2rem 1rem;
-
-
+.right.d-flex {
+    justify-content: end;
 }
